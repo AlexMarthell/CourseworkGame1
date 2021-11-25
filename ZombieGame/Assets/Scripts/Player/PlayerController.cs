@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Joystick joystick;
     public float speed;
     public float JumpForce;
     private float MoveInput;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
    private void FixedUpdate()
     {
-        MoveInput = Input.GetAxis("Horizontal");
+        MoveInput = joystick.Horizontal;
         rb.velocity = new Vector2(MoveInput * speed, rb.velocity.y);
         if(facingRight ==false && MoveInput > 0)
         {
@@ -46,8 +47,9 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        float verticalMove = joystick.Vertical;
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-        if(isGrounded==true && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded == true && verticalMove > .5f) 
         {
             rb.velocity = Vector2.up * JumpForce;
             anim.SetTrigger("takeOff");
