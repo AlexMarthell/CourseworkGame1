@@ -19,6 +19,7 @@ public class Zombie1 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerController>();
+        normalSpeed = speed;
         
     }
 
@@ -62,6 +63,7 @@ public class Zombie1 : MonoBehaviour
             if (timeBtwAttcak <= 0)
             {
                 anim.SetTrigger("attack");
+                OnEnemyAttack();
             }
             else
             {
