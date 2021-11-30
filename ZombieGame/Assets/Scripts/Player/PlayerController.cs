@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Joystick redJoystick;
     public Joystick joystick;
     public float speed;
     public float JumpForce;
@@ -43,6 +44,14 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
         }
+        //if (redJoystick.Horizontal> 0.5f && facingRight == false)
+        //{
+        //    Flip();
+        //}
+        //if (redJoystick.Horizontal < 0f && facingRight == true)
+        //{
+        //    Flip();
+        //}
     }
 
     public void Update()
@@ -62,6 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isJumping", true);
         }
+        
     }
     public void TakeDamage(int damage)
     {
@@ -81,6 +91,8 @@ public class PlayerController : MonoBehaviour
         else if (MoveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+            
         }
+        
     }
 }

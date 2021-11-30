@@ -14,8 +14,8 @@ public class TestSystem : MonoBehaviour
     public void OnClick()
     {
         greenWindow.SetActive(true);
-        greenWindow.transform.position = player.transform.position;
-        Debug.Log(greenWindow.transform.position);
+        //greenWindow.transform.position = player.transform.position;
+        //Debug.Log(greenWindow.transform.position);
 
     }
     

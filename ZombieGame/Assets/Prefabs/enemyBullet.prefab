@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8094936436677362544}
   - component: {fileID: 8094936436677362546}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: enemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 547677547
   m_SortingLayer: 2
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: b8454c1b367d9e04a940161b95bcdc24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6a85295c5164974d986fd05bd39737b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,11 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a8a2fbb9592b54a9b66b42db75f5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  lifeTime: 5
+  speed: 10
+  lifeTime: 0.5
   distance: 0.5
   damage: 1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 128
-  enemybullet: 0
+    m_Bits: 256
+  enemybullet: 1
