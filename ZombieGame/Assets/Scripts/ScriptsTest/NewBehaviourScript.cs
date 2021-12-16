@@ -9,6 +9,6 @@ public class NewBehaviourScript : MonoBehaviour
     private void Start()
     {
         txt.color = Color.white;
-        txt.text = "DenisPIpka";
+        txt.text = "‡‡";
     }
 }
