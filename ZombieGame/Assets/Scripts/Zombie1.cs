@@ -14,6 +14,7 @@ public class Zombie1 : MonoBehaviour
     public float normalSpeed;
     private PlayerController player;
     private Animator anim;
+    public GameObject bloodEffect;
 
     private void Start()
     {
@@ -37,22 +38,30 @@ public class Zombie1 : MonoBehaviour
         }
         if (health <= 0)
         {
+            Instantiate(bloodEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if (player.transform.position.x > transform.position.x)
+        if (player.health > 0)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            if (player.transform.position.x > transform.position.x)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+        
         }
-        else
+        if (player.health > 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime)
-
         /*transform.Translate(Vector2.left * speed * Time.deltaTime)*/;
     }
     public void TakeDamage(int damage)
     {
+        Instantiate(bloodEffect, transform.position, Quaternion.identity);
         stopTime = startStopTime;
         health -= damage;
     }
@@ -70,10 +79,22 @@ public class Zombie1 : MonoBehaviour
                 timeBtwAttcak -= Time.deltaTime;
             }
         }
+        
+    }
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            anim.SetBool("IsRunning", true);
+        }
     }
     public void OnEnemyAttack()
     {
-        player.health -= damage;
-        timeBtwAttcak = startTimeBtwAttcak;
+        if (player.health > 0)
+        {
+            player.health -= damage;
+            timeBtwAttcak = startTimeBtwAttcak;
+        }
+       
     }
 }

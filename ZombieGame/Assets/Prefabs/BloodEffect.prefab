@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7336400645914661569}
   - component: {fileID: 7336400645914661582}
   m_Layer: 0
-  m_Name: Z1headEffect
+  m_Name: BloodEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,7 +1538,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: f6a85295c5164974d986fd05bd39737b, type: 3}
+    - sprite: {fileID: 21300000, guid: 49ab2b2c5172af3449c77735e5437a2e, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

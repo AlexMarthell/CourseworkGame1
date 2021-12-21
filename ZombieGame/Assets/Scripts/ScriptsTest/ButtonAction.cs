@@ -7,6 +7,7 @@ public class ButtonAction : MonoBehaviour
 {
     public void ChangeSceneOnClick()
     {
+        Time.timeScale = 0;
         SceneManager.LoadScene("TestScene");
     }
 }

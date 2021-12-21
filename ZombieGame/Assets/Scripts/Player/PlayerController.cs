@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     private Animator anim;
     public float health;
+    public GameObject panel;
+    
 
     private void Start()
     {
@@ -56,6 +58,12 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
+        if (health <= 0)
+        {
+            Time.timeScale = 0;
+            panel.SetActive(true);
+            Destroy(gameObject);
+        }
         float verticalMove = joystick.Vertical;
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
         if (isGrounded == true && verticalMove > .5f) 
@@ -72,6 +80,11 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isJumping", true);
         }
         
+        
+    }
+    public void Death()
+    {
+       
     }
     public void TakeDamage(int damage)
     {
