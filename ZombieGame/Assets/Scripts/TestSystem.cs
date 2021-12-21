@@ -38,6 +38,10 @@ public class TestSystem : MonoBehaviour
                 btn.SetActive(true);
 
             }
+            else
+            {
+                btn.SetActive(false);
+            }
         }
            
         else
