@@ -18,12 +18,14 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     public float health;
     public GameObject panel;
+    public VectorValue pos;
     
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        //transform.position = pos.InitialValue;
     }
 
    private void FixedUpdate()

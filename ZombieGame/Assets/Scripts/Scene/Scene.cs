@@ -15,13 +15,6 @@ public class Scene : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
     }
 
-
-    private void Update()
-    {
-
-
-    }
-   
     public void OnKeyRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);

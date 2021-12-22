@@ -37,7 +37,7 @@ public class QuizController : MonoBehaviour
         Debug.Log(questionCollection.GetCorrect());
         if (questionCollection.GetCorrect() == 5)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("AfterTest");
         }
     }
     

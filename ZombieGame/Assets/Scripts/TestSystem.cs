@@ -5,26 +5,20 @@ using UnityEngine.UI;
 
 public class TestSystem : MonoBehaviour
 {
-    //[SerializeField] GameObject player;
+    
     [SerializeField] GameObject terminal;
     [SerializeField] GameObject btn;
     
     private PlayerController player;
 
 
-    public void OnClick()
-    {
-       
-        //greenWindow.transform.position = player.transform.position;
-        //Debug.Log(greenWindow.transform.position);
-
-    }
+   
     
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
-        //Debug.Log(terminal.transform.position.x);
         btn.SetActive(false);
+        player = FindObjectOfType<PlayerController>();
+       
     }
 
 
@@ -48,7 +42,7 @@ public class TestSystem : MonoBehaviour
         {
             btn.SetActive(false);
         }
-        //Debug.Log(greenWindow.transform.position);
+        
     }
 
 }
