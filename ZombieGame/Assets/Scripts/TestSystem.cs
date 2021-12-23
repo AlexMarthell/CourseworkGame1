@@ -30,7 +30,7 @@ public class TestSystem : MonoBehaviour
            && player.transform.position.x <= terminal.transform.position.x + 1)
             {
                 btn.SetActive(true);
-
+                
             }
             else
             {

@@ -77,10 +77,7 @@ public class PlayerController : MonoBehaviour
         
         
     }
-    public void Death()
-    {
-       
-    }
+    
     public void TakeDamage(int damage)
     {
         

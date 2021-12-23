@@ -14,7 +14,11 @@ public class Scene : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
     }
-
+    public void OnKeySampleScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+        Time.timeScale = 1;
+    }
     public void OnKeyRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
@@ -25,5 +29,10 @@ public class Scene : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
     }
+    public void OnKeyExit()
+    {
+        Application.Quit();
+    }
+    
 }
 
