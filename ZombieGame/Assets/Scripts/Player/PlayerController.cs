@@ -48,14 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
         }
-        //if (redJoystick.Horizontal> 0.5f && facingRight == false)
-        //{
-        //    Flip();
-        //}
-        //if (redJoystick.Horizontal < 0f && facingRight == true)
-        //{
-        //    Flip();
-        //}
+       
     }
 
     public void Update()

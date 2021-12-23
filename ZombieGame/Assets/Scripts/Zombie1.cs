@@ -85,7 +85,7 @@ public class Zombie1 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            anim.SetBool("IsRunning", true);
+            anim.SetBool("isRunning", true);
         }
     }
     public void OnEnemyAttack()

@@ -33,7 +33,7 @@ public class Gun : MonoBehaviour
       else if(gunTipe == GunTipe.Enemy && player.health > 0)
         {
             difference = player.transform.position - transform.position; 
-            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg +10;
         }
         
 

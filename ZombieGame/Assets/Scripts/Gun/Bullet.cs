@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
             DestroyBullet();
 
         }
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime );
     }
     public void DestroyBullet()
     {
