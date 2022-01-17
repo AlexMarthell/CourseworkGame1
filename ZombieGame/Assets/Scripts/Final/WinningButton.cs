@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class WinningButton : MonoBehaviour
 {
-    public GameObject panel;
+    
     public GameObject redButton;
+    private Animator anim;
+
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public void OnButtonClick()
     {
-        panel.SetActive(true);
+        anim.SetTrigger("DDoorBroked");
         Destroy(redButton);
     }
     
