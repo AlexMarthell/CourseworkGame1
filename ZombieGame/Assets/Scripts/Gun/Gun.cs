@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public float startTimeBTWShots;
     public GunTipe gunTipe;
     public GameObject shootEffect;
+   
     public enum GunTipe { Default, Enemy }
     private float rotZ;
     private Vector3 difference;
@@ -33,7 +34,7 @@ public class Gun : MonoBehaviour
       else if(gunTipe == GunTipe.Enemy && player.health > 0)
         {
             difference = player.transform.position - transform.position; 
-            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg +10;
+            rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         }
         
 
@@ -62,10 +63,11 @@ public class Gun : MonoBehaviour
     }
     public void Shoot()
     {
-        if(gunTipe == GunTipe.Default)
+        if (gunTipe == GunTipe.Default)
         {
             Instantiate(shootEffect, transform.position, Quaternion.identity);
         }
+        
         Instantiate(bullet, shotpoint.position, shotpoint.rotation);
         timeBTWShots = startTimeBTWShots;
     }
