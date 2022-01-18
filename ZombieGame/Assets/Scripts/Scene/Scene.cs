@@ -17,7 +17,7 @@ public class Scene : MonoBehaviour
     public void OnKeySampleScene()
     {
         SceneManager.LoadScene("SampleScene");
-        Time.timeScale = 1;
+        
     }
     public void OnKeyRestart()
     {
@@ -29,8 +29,13 @@ public class Scene : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
     }
-    public void OnKeyExit()
+    public void OnKeyMultiplayer()
     {
+        SceneManager.LoadScene("StartScene");
+        
+    }
+        public void OnKeyExit()
+        {
         Application.Quit();
     }
     

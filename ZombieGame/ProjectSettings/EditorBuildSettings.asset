@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterTest.unity
     guid: 08d25f53e1e7fdc45b397703c62f27e3
+  - enabled: 1
+    path: Assets/Scenes/Server/StartScene.unity
+    guid: 0d2813a88413ea74394120b4fbe57e35
+  - enabled: 1
+    path: Assets/Scenes/Server/ServMenu.unity
+    guid: 7dfd9d2a6d673614fbd5fb241084d157
+  - enabled: 1
+    path: Assets/Scenes/Server/ServGame.unity
+    guid: 8fffa458eec4d5e449766dcc8c3962ce
   m_configObjects: {}
