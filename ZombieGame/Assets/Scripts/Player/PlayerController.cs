@@ -34,8 +34,7 @@ public class PlayerController : MonoBehaviour
 
    private void FixedUpdate()
     {
-        if (view.IsMine)
-        {
+        
             MoveInput = joystick.Horizontal;
             rb.velocity = new Vector2(MoveInput * speed, rb.velocity.y);
             if (facingRight == false && MoveInput > 0)
@@ -55,14 +54,13 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("isRunning", true);
             }
 
-        }
+        
 
     }
 
     public void Update()
     {
-        if (view.IsMine)
-        {
+        
             if (health <= 0)
             {
                 //Time.timeScale = 0;
@@ -86,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("isJumping", true);
             }
 
-        }
+        
 
 
     }
@@ -98,8 +96,8 @@ public class PlayerController : MonoBehaviour
     }
     void Flip()
     {
-        if (view.IsMine)
-        {
+        
+        
             facingRight = !facingRight;
             Vector3 Scaler = transform.localScale;
             Scaler.x *= -1;
@@ -114,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
             }
 
-        }
+        
     }
            
 }
